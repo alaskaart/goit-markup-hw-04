@@ -17,7 +17,6 @@
 
 
 body {
-    background-color: var(--primary-white-color);
     color: var(--primary-text-color);
     font-family: Roboto, sans-serif;
     font-size: 14px;
@@ -120,6 +119,10 @@ border-bottom: 1px solid var(--header);
     color: var(--accent-color);
 }
 
+.link.current::after {
+
+}
+
 .letter,
 .phone {
     fill: currentColor;
@@ -131,6 +134,7 @@ border-bottom: 1px solid var(--header);
 
 .contact-nav {
     display: flex;
+    align-items: center;
     margin-left: auto;
 }
 
@@ -141,6 +145,7 @@ border-bottom: 1px solid var(--header);
 
 .contact-nav .link {
     display: flex;
+    align-items: center;
     color: var(--primary-text-color);
     text-decoration: none;
     font-weight: 500;
@@ -575,13 +580,6 @@ border-bottom: 1px solid var(--header);
     margin-right: 8px;
 }
 
-.filter-li:hover,
-.filter-li:focus {
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
-    0px 1px 2px rgba(0, 0, 0, 0.08), 
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
 .image {
     display: block;
 }
@@ -606,13 +604,6 @@ border-bottom: 1px solid var(--header);
     margin-bottom: 30px;
 }
 
-
-.element:hover,
-.element:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
-    0px 4px 4px rgba(0, 0, 0, 0.06), 
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 /* border: 1px solid var(--border) */
 
 .element:nth-last-child(-n + 3) {
@@ -633,6 +624,11 @@ border-bottom: 1px solid var(--header);
 .filters .button:focus {
     color: var(--primary-white-color);
     background-color: var(--accent-color);
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
 }
 
 .filters .title {
@@ -646,7 +642,15 @@ border-bottom: 1px solid var(--header);
 }
 
 .filters .link {
+    display: block;
     text-decoration: none;
+}
+
+.filters .link:hover,
+.filters .link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .filters .text {
